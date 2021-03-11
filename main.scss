@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+// variables start
+$popins: 'Poppins', sans-serif;
+
+$Violet: hsl(257, 40%, 49%);
+$SoftMagenta: hsl(300, 69%, 71%);
+// variables end
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-color: $Violet;
+}
+
+.bg{
+    width: 100%;
+    height: 100vh;
+    background: url(images/bg-desktop.svg);
+}
+
+.icon {
+    padding-top: 30px;
+    padding-left: 50px;
+}
+
+.icon svg{
+    width: 200px;
+}
+
+.img{
+    padding-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+    float: left;
+}
+
+.content{
+    font-family: $popins;
+    color: white;
+    margin-top: 100px;
+    padding-left: 40px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.content h1{
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.content span{
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.btn{
+    margin-top: 40px;
+}
+
+
+.btn a{
+    text-decoration: none;
+    color: $Violet;
+    background: white;
+    border-radius: 40px;
+    padding: 15px 60px;
+    box-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 0.3);
+    transition: all .5s ease;
+}
+
+.btn a:hover{
+    color: white;
+    background: $SoftMagenta;
+}
+
+.social{
+    float: right;
+    margin-right: 30px;
+    margin-top: 120px;
+}
+
+.social a .fab{
+    color: white;
+    border: 2px solid white;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 40px;
+    transition: all 0.5s ease;
+}
+
+
+.social a .fab:hover{
+    color: $SoftMagenta;
+    border: 2px solid $SoftMagenta;
+}
+
+.social a.facebook .fab{
+    padding: 10px 13px 10px 13px;
+}
+
+@media(max-width: 771px){
+    .bg{
+        width: 100%;
+        height: 100vh;
+        background: url(images/bg-mobile.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+
+    .content {
+        text-align: center;
+        margin-right: 20px;
+    }
+
+    .btn a {
+        text-decoration: none;
+        color: #674baf;
+        background: white;
+        border-radius: 40px;
+        padding: 15px 90px;
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+        margin-left: 260px;
+    }
+}
+
+@media(max-width: 503px){
+    .btn a {
+        text-decoration: none;
+        color: #674baf;
+        background: white;
+        border-radius: 40px;
+        padding: 15px 90px;
+        -webkit-transition: all .5s ease;
+        transition: all .5s ease;
+        margin-left: 100px;
+    }
+
+    .social {
+        text-align: center;
+        float: none;
+        margin-right: 30px;
+        margin-top: 120px;
+        padding-bottom: 30px;
+        margin-right: -5px;
+    }
+    .social a .fab {
+        color: white;
+        border: 1px solid white;
+        padding: 10px;
+        border-radius: 50%;
+        margin-right: 10px;
+        -webkit-transition: all 0.5s ease;
+        transition: all 0.5s ease;
+    }
+
+    .img {
+        transform: scale(0.5);
+        padding-top: 0;
+        padding-left: 0;
+        padding-right: 0;
+        float: right;
+    }
+    
+    .img svg{
+        margin-right: -180px;
+    }
+}
